@@ -190,7 +190,6 @@ header {
     margin: 0;
     font-size: 1.6rem;
 }
-
 .photo-info .tags {
     margin-top: 0.5rem;
 }
@@ -270,6 +269,45 @@ header {
     margin: 20px auto;      /* centrăm pe mijloc și adăugăm spațiu sus-jos */
     border-radius: 1px;     /* rotunjire fină (opțional) */
 }
+.reviews{
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: clamp(1rem, 10%, 10rem);
+    margin-right: clamp(1rem, 10%, 10rem);
+    gap:5px;
+}
+.reviews-text .rt{
+    max-width: 40%;
+    padding: 5px;
+}
+.rth3{
+    font-size: clamp(2rem, 5vw + 1rem, 5rem);
+
+}
+.circle-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.review, .reviews-text{
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 @media (min-width: 1024px) {
     .service {
         gap: 22rem;
@@ -300,11 +338,21 @@ header {
     header{
       flex-direction: column;
         gap:20px;
+        padding: 10px;
     }
     .text-info p{
         font-size: 2rem;
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+    .reviews{
+        width: 100%;
+        margin:0;
+        flex-direction: column;
+        gap:30px;
+    }
+    .reviews-text .rt{
+        max-width: 100%;
     }
 }
 @media (max-width: 600px) {
