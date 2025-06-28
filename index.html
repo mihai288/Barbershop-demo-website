@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbershop - Haircuts | Cool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+</head>
+
+<header>
+    <h1>BarberShop</h1>
+
+    <div class="buttons">
+        <a href="index.html">Home</a>
+        <a href="index.html">About</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html" class="book-now">Book Your Cut</a>
+    </div>
+    <div class="sidebar-open">
+        <a href="index.html">Home</a>
+        <a href="index.html">About</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html" class="book-now">Book Your Cut</a>
+    </div>
+    <div class="sidebar">
+      <a href="#" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+
+</header>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<body>
+    <div class="tracker">
+        <div class="dot"></div>
+    </div>
+
+
+
+
+
+    <div class="hero-section" data-aos="fade-up">
+        <h1>BARBERSHOP</h1>
+        <h2>STYLE FOR MEN</h2>
+    </div>
+
+    <div class="center-btn">
+        <a href="index.html" class="book-now">Book Your Cut</a>
+    </div>
+
+    <div class="info-photos">
+    <div class="photo-container">
+        <img class="img1" src="static/images/photo1.jpg"/>
+        <div class="photo-info">
+            <h3>STYLING THAT SPEAKS FOR ITSELF</h3>
+            <div class="tags">
+                <span>#MensStyling</span>
+                <span>#FreshLook</span>
+            </div>
+        </div>
+    </div>
+    <div class="photo-container">
+        <img class="img2" src="static/images/photo2.jpg"/>
+        <div class="photo-info">
+            <h3>STYLING THAT SPEAKS FOR ITSELF</h3>
+            <div class="tags">
+                <span>#MensStyling</span>
+                <span>#FreshLook</span>
+            </div>
+        </div>
+    </div>
+    <div class="photo-container">
+        <img class="img3" src="static/images/photo3.jpg"/>
+        <div class="photo-info">
+            <h3>STYLING THAT SPEAKS FOR ITSELF</h3>
+            <div class="tags">
+                <span>#MensStyling</span>
+                <span>#FreshLook</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+  const tracker = document.querySelector('.tracker');
+  const dot = tracker.querySelector('.dot');
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+
+  let trackerX = mouseX;
+  let trackerY = mouseY;
+
+  let dotX = mouseX;
+  let dotY = mouseY;
+
+  // Mouse move tracking
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animate() {
+    // Interpolare pentru cerc
+    trackerX += (mouseX - trackerX) * 0.1;
+    trackerY += (mouseY - trackerY) * 0.1;
+
+    // Interpolare pentru punct
+    dotX += (mouseX - dotX) * 0.3;
+    dotY += (mouseY - dotY) * 0.3;
+
+    tracker.style.transform = `translate3d(${trackerX - 20}px, ${trackerY - 20}px, 0)`;
+    dot.style.left = `${dotX - trackerX + 20}px`;
+    dot.style.top = `${dotY - trackerY + 20}px`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  const sidebarLink = document.querySelector('.sidebar a');
+const header = document.querySelector('header');
+const sidebaropen = document.querySelector('.sidebar-open');
+
+sidebarLink.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (header.style.height === '90%') {
+    header.style.height = '';  // revine la valoarea CSS inițială
+      sidebaropen.style.display = "none";
+  } else {
+    header.style.height = '90%';
+    sidebaropen.style.display = "flex";
+    sidebaropen.style.flexDirection = "column";
+    sidebaropen.style.gap = "80px";
+    sidebaropen.style.textAlign = "center";
+  }
+});
+
+</script>
+
+
+
+</body>
+</html>
