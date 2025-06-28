@@ -212,6 +212,69 @@ header {
     padding: 20px;
     font-size: 20px;
 }
+.text-info{
+    margin-top: 5rem;
+}
+.text-info p{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #bdbdbd;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.text-info .info-title{
+    color: #bdbdbd;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.our-services{
+    margin-top: 5rem;
+    text-align: center;
+    background-color: #f3f318;
+}
+.our-services h3 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+}
+.services{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.price-time{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.service{
+    color:white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 8vw, 10rem);
+
+}
+.service h3 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.service p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+.line {
+    width: 50%;             /* 60-70% din lățime */
+    height: 2px;            /* grosimea liniei */
+    background: #ccc;       /* culoarea liniei, modifică după nevoie */
+    margin: 20px auto;      /* centrăm pe mijloc și adăugăm spațiu sus-jos */
+    border-radius: 1px;     /* rotunjire fină (opțional) */
+}
+@media (min-width: 1024px) {
+    .service {
+        gap: 22rem;
+    }
+}
 @media (max-width: 1100px) {
         .info-photos {
         flex-direction: column;
@@ -226,12 +289,22 @@ header {
     .photo-container img:hover {
         width: 90vw; /* opțional: dezactivezi creșterea la hover pe mobil */
     }
+    .text-info p{
+        font-size: 3rem;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
 
 }
 @media (max-width: 760px) {
     header{
       flex-direction: column;
         gap:20px;
+    }
+    .text-info p{
+        font-size: 2rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
 @media (max-width: 600px) {
@@ -255,5 +328,10 @@ header {
   }
     .center-btn a{
         padding: 10px;
+    }
+    .text-info p{
+        font-size: 1.5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }
