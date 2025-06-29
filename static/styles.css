@@ -487,8 +487,14 @@ footer a:hover{
     .reviews-text .rt{
         max-width: 100%;
     }
+    .map{
+        transform: scale(0.8);
+    }
 }
 @media (max-width: 600px) {
+    .map{
+        transform: scale(0.6);
+    }
   .tracker {
     width: 30px;
     height: 30px;
@@ -522,5 +528,16 @@ footer a:hover{
     header{
         flex-direction: row;
         padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .map {
+        transform: scale(0.5);
+    }
+}
+@media (max-width: 353px) {
+    .map {
+        transform: scale(0.4);
     }
 }
