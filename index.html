@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barbershop - Haircuts | Cool</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbershop - Haircuts | Cool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="static/styles.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -26,6 +28,7 @@
         <a href="index.html" class="book-now">BOOK NOW</a>
     </div>
     <div class="sidebar">
+        <p class="menu-text" style="margin-right: 10px;">Menu</p>
       <a href="#" class="hamburger">
         <span></span>
         <span></span>
@@ -104,7 +107,7 @@
     <div class="services">
 
         <div class="service">
-            <h3>HAIRCUT</h3>
+            <h3>HAIRCUT FADE</h3>
             <div class="price-time">
                 <p class="price">60 RON</p>
                 <p class="time">40 MIN</p>
@@ -114,9 +117,9 @@
         <div class="line"></div>
 
         <div class="service">
-            <h3>HAIRCUT</h3>
+            <h3>BEARD TRIM</h3>
             <div class="price-time">
-                <p class="price">60 RON</p>
+                <p class="price">20 RON</p>
                 <p class="time">40 MIN</p>
             </div>
         </div>
@@ -124,9 +127,9 @@
         <div class="line"></div>
 
         <div class="service">
-            <h3>HAIRCUT</h3>
+            <h3>HAIRCUT NORMAL</h3>
             <div class="price-time">
-                <p class="price">60 RON</p>
+                <p class="price">50 RON</p>
                 <p class="time">40 MIN</p>
             </div>
         </div>
@@ -134,7 +137,7 @@
         <div class="line"></div>
 
         <div class="service">
-            <h3>HAIRCUT</h3>
+            <h3>hair</h3>
             <div class="price-time">
                 <p class="price">60 RON</p>
                 <p class="time">40 MIN</p>
@@ -143,19 +146,34 @@
 
     </div>
     <div class="center-btn" style="margin-top: 3rem;">
-        <a href="index.html" class="book-now">BOOK NOW</a>
+        <a href="index.html" class="book">BOOK NOW</a>
     </div>
 
     <div class="reviews">
         <div class="reviews-text">
             <div class="circle-container">
-                <span class="circle"> </span>
-                <h3 style="font-size: 30px;">Reviews</h3>
+                <h3 style="font-size: 30px; margin-left: 5px;">Reviews</h3>
             </div><br><br>
 
-            <h2>WHAT OUR CUSTOMERS SAY</h2>
-            <p class="rt">A GOOD HAIRCUT IS NOT JUST MEASURED IN MILLIMETERS, BUT IN SMILES AND CONFIDENCE. DISCOVER WHAT OUR CUSTOMERS SAY ABOUT THEIR EXPERIENCE AT NEXTCUT!</p><br><br>
+            <h2 style="margin-left: 5px;">WHAT OUR CUSTOMERS SAY</h2>
+            <p class="rt">A GOOD HAIRCUT IS NOT JUST MEASURED IN MILLIMETERS, BUT IN SMILES AND CONFIDENCE.<br> DISCOVER WHAT OUR CUSTOMERS SAY ABOUT THEIR EXPERIENCE AT NEXTCUT!</p><br><br>
             <a href="#" class="book-now">LEAVE A REVIEW</a>
+        </div>
+
+        <div class="review">
+            <h3>5⭐</h3>
+            <br>
+            <p>Best Experience ever. Such a nice guy</p>
+            <br><br><br><br><br>
+            <h3>JAN</h3>
+        </div>
+
+        <div class="review">
+            <h3>5⭐</h3>
+            <br>
+            <p>Best Experience ever. Such a nice guy</p>
+            <br><br><br><br><br>
+            <h3>JAN</h3>
         </div>
 
         <div class="review">
@@ -217,12 +235,14 @@ sidebarLink.addEventListener('click', (e) => {
   if (header.style.height === '90%') {
     header.style.height = '';  // revine la valoarea CSS inițială
       sidebaropen.style.display = "none";
+      header.style.flexDirection = "row";
   } else {
     header.style.height = '90%';
     sidebaropen.style.display = "flex";
     sidebaropen.style.flexDirection = "column";
     sidebaropen.style.gap = "80px";
     sidebaropen.style.textAlign = "center";
+    header.style.flexDirection = "column";
   }
 });
 
