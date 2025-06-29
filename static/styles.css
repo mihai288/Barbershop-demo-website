@@ -28,6 +28,7 @@ html, body {
   overflow-y: auto;
     cursor: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
 }
 a{
